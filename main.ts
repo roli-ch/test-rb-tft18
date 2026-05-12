@@ -23,6 +23,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     // Farben
+    /*
     RBTFT18.showString("Farbe Olive", 10, 10, 1, Color.Olive, Color.Black)
     RBTFT18.showString("Farbe Navy", 10, 17, 1, Color.Navy, Color.White)
     RBTFT18.showString("Farbe DarkGreen", 10, 24, 1, Color.DarkGreen, Color.White)
@@ -40,18 +41,21 @@ input.onButtonPressed(Button.B, function () {
     RBTFT18.showString("Farbe Orange", 10, 101, 1, Color.Orange, Color.Black)
     RBTFT18.showString("Farbe GreenYellow", 10, 108, 1, Color.GreenYellow, Color.Black)
     RBTFT18.showString("Farbe Pink", 10, 115, 1, Color.Pink, Color.White)
+    */
     // Rahmen
     // Draw a yellow rectangle
-    RBTFT18.drawRectangle(
-        0,
-        0,
-        128,
-        160,
-        Color.White
-    )
+    drawRahmen(10, 10, 100, 140, 0xFFFF)
     //showTest()
     basic.showIcon(IconNames.Yes)
 })
+
+function drawRahmen(x: number, y: number, width: number, height: number, color: Color) {
+    RBTFT18.drawLine(5, 5, 51, 50, color)
+    //RBTFT18.drawLine(x, y, x + width, y, color)
+    //RBTFT18.drawLine(x, y, x+width, y+height, color)
+    //BTFT18.drawLine(x, y+height, x + width, y+height, color)
+    //RBTFT18.drawLine(x+width, y, x + width, y+height, color)
+}
 
 function showTest() {
     // Draw a straight blue line
