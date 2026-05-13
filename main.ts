@@ -54,41 +54,6 @@ input.onButtonPressed(Button.B, function () {
     //showTest()
     basic.showIcon(IconNames.Yes)
 })
-function drawL(x0: number, y0: number, x1: number, y1: number, color: Color): void {
-    let xDelta = x1 - x0
-    let yDelta = y1 - y0
-
-    if (Math.abs(yDelta) > Math.abs(xDelta)) {
-        let ySteps = Math.abs(yDelta)
-        serial.writeLine("ySteps: " + ySteps)
-        let xIncrement = xDelta == 0 ? 0 : xDelta / ySteps
-        let yIncrement = yDelta > 0 ? 1 : -1
-
-        let x = x0
-        let y = y0
-        for (let steps = 0; steps <= ySteps; steps++) {
-            RBTFT18.drawPixel(x, y, color)
-            serial.writeLine("x y " +x+" "+ y)
-            y = y + yIncrement
-            x = x + xIncrement
-        }
-    }
-    else {
-        let xSteps = Math.abs(xDelta)
-        serial.writeLine("xSteps: " + xSteps)
-        let yIncrement = yDelta == 0 ? 0 : yDelta / xSteps
-        let xIncrement = xDelta > 0 ? 1 : -1
-
-        let y = y0
-        let x = x0
-        for (let steps = 0; steps <= xSteps; steps++) {
-            RBTFT18.drawPixel(x, y, color)
-            serial.writeLine("x y " + x + " " + y)
-            y = y + yIncrement
-            x = x + xIncrement
-        }
-    }
-}
 
 function drawRahmen(x: number, y: number, width: number, height: number, color: Color) {
     //drawL(5, 5, 20, 30, color)
@@ -96,10 +61,10 @@ function drawRahmen(x: number, y: number, width: number, height: number, color: 
     //RBTFT18.drawLine(x, y, x+width, y+height, color)
     //BTFT18.drawLine(x, y+height, x + width, y+height, color)
     //RBTFT18.drawLine(x+width, y, x + width, y+height, color)
-    drawL(x, y, x + width, y, color)
-    drawL(x, y, x, y+height, color)
-    drawL(x, y+height, x + width, y+height, color)
-    drawL(x+width, y, x + width, y+height, color)
+    RBTFT18.drawLine(x, y, x + width, y, color)
+    RBTFT18.drawLine(x, y, x, y+height, color)
+    RBTFT18.drawLine(x, y+height, x + width, y+height, color)
+    RBTFT18.drawLine(x+width, y, x + width, y+height, color)
 }
 
 function showTest() {
