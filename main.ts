@@ -30,23 +30,24 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     // Farben
     RBTFT18.showString("Farbe Olive", 10, 10, 1, Color.Olive, Color.Black)
-    RBTFT18.showString("Farbe Navy", 10, 17, 1, Color.Navy, Color.White)
-    RBTFT18.showString("Farbe DarkGreen", 10, 24, 1, Color.DarkGreen, Color.White)
-    RBTFT18.showString("Farbe DarkCyan", 10, 31, 1, Color.DarkCyan, Color.White)
+    RBTFT18.showString("Farbe Navy", 10, 17, 1, Color.Navy, Color.Black)
+    RBTFT18.showString("Farbe DarkGreen", 10, 24, 1, Color.DarkGreen, Color.Black)
+    RBTFT18.showString("Farbe DarkCyan", 10, 31, 1, Color.DarkCyan, Color.Black)
     RBTFT18.showString("Farbe Maroon", 10, 38, 1, Color.Maroon, Color.White)
     RBTFT18.showString("Farbe Purple", 10, 45, 1, Color.Purple, Color.Black)
     RBTFT18.showString("Farbe LightGrey", 10, 45, 1, Color.LightGrey, Color.Black)
-    RBTFT18.showString("Farbe DarkGrey", 10, 52, 1, Color.DarkGrey, Color.White)
-    RBTFT18.showString("Farbe Red", 10, 59, 1, Color.Blue, Color.White)     // Blue und Red vertauscht
+    RBTFT18.showString("Farbe DarkGrey", 10, 52, 1, Color.DarkGrey, Color.Black)
+    RBTFT18.showString("Farbe Red", 10, 59, 1, Color.Red, Color.Black)     // Blue und Red vertauscht
     RBTFT18.showString("Farbe Green", 10, 66, 1, Color.Green, Color.Black)
-    RBTFT18.showString("Farbe Yellow", 10, 73, 1, Color.Cyan, Color.Black)    // Yellow und Cyan vertauscht
-    RBTFT18.showString("Farbe Blue", 10, 80, 1, Color.Red, Color.White)     // Blue und Red vertauscht
-    RBTFT18.showString("Farbe Magenta", 10, 87, 1, Color.Magenta, Color.White)
-    RBTFT18.showString("Farbe Cyan", 10, 94, 1, Color.Yellow, Color.Black)    // Yellow und Cyan vertauscht
+    RBTFT18.showString("Farbe Yellow", 10, 73, 1, Color.Yellow, Color.Black)    // Yellow und Cyan vertauscht
+    RBTFT18.showString("Farbe Blue", 10, 80, 1, Color.Blue, Color.White)     // Blue und Red vertauscht
+    RBTFT18.showString("Farbe Magenta", 10, 87, 1, Color.Magenta, Color.Black)
+    RBTFT18.showString("Farbe Cyan", 10, 94, 1, Color.Cyan, Color.Black)    // Yellow und Cyan vertauscht
     RBTFT18.showString("Farbe Orange", 10, 101, 1, Color.Orange, Color.Black)
     RBTFT18.showString("Farbe GreenYellow", 10, 108, 1, Color.GreenYellow, Color.Black)
-    RBTFT18.showString("Farbe Pink", 10, 115, 1, Color.Pink, Color.White)
-    
+    RBTFT18.showString("Farbe Pink", 10, 115, 1, Color.Pink, Color.Black)
+    RBTFT18.showString("Farbe Black", 10, 121, 1, Color.Black, Color.White)
+
     // Rahmen
     // Draw a yellow rectangle
     drawRahmen(2, 1, 127, 159, 0xFFFF)
