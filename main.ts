@@ -14,11 +14,12 @@
 RBTFT18.init()
 // Clear screen - replaces whole screen with a black rectangle
 RBTFT18.clearScreen()
-// Draw a single red pixel
+// Draw a single white pixel
 RBTFT18.drawPixel(10, 10, Color.White)
 RBTFT18.drawPixel(11, 11, Color.White)
 RBTFT18.drawPixel(12, 12, Color.White)
 RBTFT18.drawPixel(13, 13, Color.White)
+RBTFT18.drawPixel(20, 20, Color.White)
 //showTest()
 
 input.onButtonPressed(Button.A, function () {
@@ -56,7 +57,8 @@ input.onButtonPressed(Button.B, function () {
 
     // Rahmen
     // Draw a yellow rectangle
-    drawRahmen(2, 1, 127, 159, 0xFFFF)
+    //drawRahmen(2, 1, 127, 159, 0xFFFF)
+    drawRahmen(2, 1, 127, 159, Color.Yellow)
     //showTest()
     basic.showIcon(IconNames.Yes)
 })
