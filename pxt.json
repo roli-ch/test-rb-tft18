@@ -1,5 +1,5 @@
 {
-    "name": "TFT-LCD-Test",
+    "name": "Test-RB-TFT18",
     "description": "",
     "dependencies": {
         "core": "*",
