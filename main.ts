@@ -1,3 +1,9 @@
+// Test RB-TFT1.8
+// filename: test-rb-tft18.ts
+//
+// pfr / 
+// Mod: 27.6.2026
+//
 // 1.8" TFT Touch Display "RB-TFT1.8-T"
 // 128 x 160 pixel
 // Treiber ST7735R
