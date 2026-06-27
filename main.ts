@@ -2,7 +2,7 @@
 // filename: test-rb-tft18.ts
 //
 // pfr / 
-// Mod: 27.6.2026
+// Mod: pfr / 27.6.2026
 //
 // 1.8" TFT Touch Display "RB-TFT1.8-T"
 // 128 x 160 pixel
