@@ -1,7 +1,7 @@
 // Test RB-TFT1.8
 // filename: test-rb-tft18.ts
 //
-// pfr / 
+// pfr /  
 // Mod: pfr / 27.6.2026
 //
 // 1.8" TFT Touch Display "RB-TFT1.8-T"
