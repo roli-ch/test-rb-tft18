@@ -20,21 +20,26 @@ RBTFT18.drawPixel(11, 11, Color.White)
 RBTFT18.drawPixel(12, 12, Color.White)
 RBTFT18.drawPixel(13, 13, Color.White)
 RBTFT18.drawPixel(20, 20, Color.White)
+
+console.log("Init")
+serial.writeLine("Init")
 //showTest()
 
 input.onButtonPressed(Button.A, function () {
     basic.showString("A")
-    basic.pause(1000)
+    console.log("A")
     // Turn off display
     RBTFT18.turnOff()
     basic.pause(1000)
     // Turn on display
     RBTFT18.turnOn()
     basic.showIcon(IconNames.Yes)
+    showTest()
 })
 
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
+    console.log("B")
     // Farben
     RBTFT18.showString("Farbe Olive", 10, 10, 1, Color.Olive, Color.Black)
     RBTFT18.showString("Farbe Navy", 10, 17, 1, Color.Navy, Color.Black)
@@ -76,49 +81,20 @@ function drawRahmen(x: number, y: number, width: number, height: number, color: 
 }
 
 function showTest() {
+    RBTFT18.clearScreen()
     // Draw a straight blue line
-    RBTFT18.drawLine(
-        0,
-        0,
-        100,
-        100,
-        Color.Blue
-    )
+    RBTFT18.drawLine(0,0,100,100,Color.Blue)
     basic.pause(1000)
     // Draw a yellow rectangle
-    RBTFT18.drawRectangle(
-        0,
-        0,
-        10,
-        12,
-        Color.Blue
-    )
+    RBTFT18.drawRectangle(0, 0, 10, 12, Color.Blue)
     basic.pause(1000)
     // Draw a green circle
-    RBTFT18.drawCircle(
-        50,
-        50,
-        10,
-        Color.Red
-    )
+    RBTFT18.drawCircle(50, 50, 10, Color.Red)
     basic.pause(1000)
     // Clear screen - replaces whole screen with a black rectangle
     RBTFT18.clearScreen()
     // Show white text with black background
-    RBTFT18.showString(
-        "I am your RB-TFT1.8!",
-        10,
-        10,
-        1,
-        Color.Red,
-        Color.Black
-    )
-    basic.pause(1000)
-    // Turn off display
-    RBTFT18.turnOff()
-    basic.pause(1000)
-    // Turn on display
-    RBTFT18.turnOn()
+    RBTFT18.showString("I am your RB-TFT1.8!", 10, 10, 1, Color.Red, Color.Black)
 }
 
 
